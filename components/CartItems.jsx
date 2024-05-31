@@ -29,6 +29,11 @@ export default function CartItems({ items }) {
           <div key={index} className="cart__item border p-4 mb-4 rounded-lg">
             <h2 className="cart__item-title text-lg font-bold">{item.title}</h2>
             <p className="cart__item-price text-gray-600">${item.price}</p>
+            <img
+              className="cart__item-image h-20"
+              src={item.image}
+              alt={item.title}
+            />
             <button
               onClick={() => removeFromCart(index)}
               className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
